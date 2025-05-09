@@ -1,33 +1,38 @@
-// src/pages/Menu.js
 import React from 'react';
 import './menu.css';
+import menuItems from '../data/menuItems';
 
 const Menu = () => {
+  const addToCart = (item) => {
+    console.log("Añadido al carrito:", item);
+  };
+
   return (
     <section className="menu-container">
       <h1 className="menu-title">Nuestro Menú</h1>
       <div className="menu-grid">
-        {/* Card 1 */}
-        <div className="menu-card">
-          <img src="/hamburguesa.jpg" alt="Hamburguesa Clásica" className="menu-img" />
-          <div className="menu-content">
-            <h3>Hamburguesa Clásica</h3>
-            <p>Carne 100% de res, lechuga, tomate, queso cheddar.</p>
-            <span className="menu-price">$12.000</span>
+        {menuItems?.map((item, index) => (
+          <div key={index} className="menu-card">
+            <img src={item.imagen} alt={item.nombre} className="menu-img" />
+            <div className="menu-content">
+              <h3>{item.nombre}</h3>
+              <p>{item.descripcion}</p>
+              <span className="menu-price">${item.precio.toLocaleString()}</span>
+              <button
+                className="button-cart-menu"
+                onClick={() =>
+                  addToCart({
+                    nombre: item.nombre,
+                    precio: item.precio,
+                    imagen: item.imagen
+                  })
+                }
+              >
+                Añadir al carrito
+              </button>
+            </div>
           </div>
-        </div>
-
-        {/* Card 2 */}
-        <div className="menu-card">
-          <img src="/salchi.jpg" alt="Salchipapas" className="menu-img" />
-          <div className="menu-content">
-            <h3>Salchipapas</h3>
-            <p>Papas crujientes, salchichas artesanales, salsas especiales.</p>
-            <span className="menu-price">$10.000</span>
-          </div>
-        </div>
-
-        {/* Puedes seguir agregando más productos aquí */}
+        ))}
       </div>
     </section>
   );

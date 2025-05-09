@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #222;
+    background-color:#1a1a1a;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -10,25 +10,29 @@
 .nav-link {
     list-style: none;
     display: flex;
+    color: white;
+
 }
 
 .nav-link li {
     margin-left: 20px;
+    color: white;
+
 }
 
 .nav-link a {
-    color: white;
     text-decoration: none;
     font-size: 16px;
 
 }
 
 .title-logo {
-    font-size: 24px;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #f9c846;
-
+    color: #ff4b2b;
+    font-family: "Helvetica Black";
 }
+
 
 .cart a {
     text-decoration: none;
@@ -49,7 +53,7 @@
 .hero-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 .hero-content {
@@ -67,12 +71,7 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.hero-content p {
-    margin-bottom: 10px;
-    width: 20rem;
-    color: #f4f4f4;
-    font-size: 20px;
-}
+
 
 .button-menu {
     background-color: #f9c846;
@@ -82,56 +81,9 @@
     padding: 0.8rem;
     width: 8rem;
 }
+
 .img-section {
     display: flex;
 
 }
 
-.img-three {
-    height: 40vh;
-    width: auto; /* Mantiene la proporción de las imágenes */
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
-    border-radius: 8px;
-    margin-top: 1rem;
-}
-
-/* Ajustes responsivos para el banner */
-@media (max-width: 768px) {
-    .hero-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        height: auto; /* Se ajusta dinámicamente según el contenido */
-    }
-
-    .box-img {
-        width: 100%;
-    }
-
-    .hero-img {
-        width: 100%;
-        height: auto;
-    }
-
-    .hero-content {
-        padding: 20px;
-        position: relative;
-        top: 0; /* Quitar posicionamiento absoluto en pantallas pequeñas */
-        transform: none; /* No aplicar el centrado con transform en móvil */
-    }
-
-    .title {
-        font-size: 2.5rem; /* Ajustar tamaño de título en móviles */
-    }
-
-    .hero-content p {
-        font-size: 1.2rem; /* Ajustar el texto en dispositivos pequeños */
-        width: auto;
-    }
-
-    .button-menu {
-        width: 100%;
-    }
-}

@@ -31,9 +31,6 @@ const Navbar = () => {
               <Link className="nav-link" to="/menu">Menú</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/ubicacion">Ubicación</Link>
-            </li>
-            <li className="nav-item">
               <Link className="nav-link cart" to="/cart">Carrito</Link>
             </li>
             {user ? (

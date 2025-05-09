@@ -1,12 +1,12 @@
 // src/pages/Ubicacion.js
 import React from 'react';
-import './ubicacion.css';
+import './location.css';
 
-const Ubicacion = () => {
+const Location = () => {
   return (
     <section className="ubicacion-container">
       <div className="ubicacion-info">
-        <h1>¿Dónde nos encontramos?</h1>
+        <h1 className='location-title'>¿DÓNDE NOS ENCONTRAMOS?</h1>
         <p>¡Ven a visitarnos y disfruta de nuestros platos en un ambiente acogedor y delicioso!</p>
         <p><strong>Dirección:</strong> Calle 123 #45-67, Barrio Gourmet, Ciudad Sabor</p>
         <p><strong>Teléfono:</strong> (123) 456-7890</p>
@@ -28,4 +28,4 @@ const Ubicacion = () => {
   );
 };
 
-export default Ubicacion;
+export default Location;

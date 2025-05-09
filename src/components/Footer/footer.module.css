@@ -1,0 +1,75 @@
+.footer {
+    background-color: #1a1a1af5;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.dividerCustom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.dividerCustomLine {
+    width: 50px;
+    height: 2px;
+    background-color: #fff;
+    margin: 0 10px;
+}
+
+.dividerCustomIcon {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.rowfooter {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.titlelocation,
+.titlecontact {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-family: "Flame-RegularSans";
+
+}
+
+.plocation {
+    font-size: 1rem;
+    margin: 0;
+    font-family: "Flame-RegularSans";
+
+}
+
+.iconscontact {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.btnSocial {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.btnSocial:hover {
+    color: #f39c12;
+}
+
+.footerBottom {
+    background-color: #111;
+    padding: 1rem;
+    text-align: center;
+    color: #bbb;
+    font-size: 0.875rem;
+    font-family: "Flame-RegularSans";
+
+}

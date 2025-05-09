@@ -1,5 +1,6 @@
 // src/pages/Cart.js
 import React, { useState, useEffect } from 'react';
+import { IoCartOutline } from "react-icons/io5";
 import './cart.css';
 
 const Cart = () => {
@@ -27,7 +28,7 @@ const Cart = () => {
 
   return (
     <div className="cart-container">
-      <h2>🛒 Tu Carrito</h2>
+      <h2 className='title-cart'><IoCartOutline />Tu Carrito</h2>
       {cartItems.length === 0 ? (
         <p className="empty-cart">Tu carrito está vacío.</p>
       ) : (

@@ -1,63 +1,90 @@
 /* src/pages/menu.css */
 .menu-container {
-    padding: 60px 20px;
-    background: #f8f8f8;
-    min-height: 100vh;
-    text-align: center;
-  }
-  
-  .menu-title {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    font-weight: bold;
-    color: #2c3e50;
-  }
-  
-  .menu-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
-  
-  .menu-card {
-    background-color: white;
-    border-radius: 15px;
-    overflow: hidden;
-    width: 300px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-  
-  .menu-card:hover {
-    transform: scale(1.03);
-  }
-  
-  .menu-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .menu-content {
-    padding: 20px;
-  }
-  
-  .menu-content h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    color: #34495e;
-  }
-  
-  .menu-content p {
-    font-size: 1rem;
-    color: #777;
-    margin-bottom: 15px;
-  }
-  
-  .menu-price {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #e74c3c;
-  }
-  
+  padding: 60px 20px;
+  background: #f8f8f8;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.menu-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #e63946;
+  font-family: "Helvetica Black";
+
+}
+
+.menu-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.menu-card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.menu-card:hover {
+  transform: scale(1.03);
+}
+
+.menu-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100%;
+}
+
+.menu-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #34495e;
+  font-family: "Helvetica Black";
+
+}
+
+.menu-content p {
+  font-size: 1rem;
+  color: #777;
+  text-align: left;
+  font-family: "Flame-RegularSans";
+
+}
+
+.menu-price {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #ff4b2be1;
+  text-align: left;
+}
+
+
+.button-cart-menu {
+  align-self: flex-end;
+  margin-top: auto;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Flame-RegularSans";
+}
