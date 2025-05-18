@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './register.css';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -52,7 +54,7 @@ const Register = () => {
             />
           </div>
           <button type="submit">Registrarse</button>
-          <p>¿Ya tienes cuenta? <a href="/login">Inicia sesión</a></p>
+          <p>¿Ya tienes cuenta? <Link to="/login">Inicia sesión</Link></p>
         </form>
       </div>
     </div>
