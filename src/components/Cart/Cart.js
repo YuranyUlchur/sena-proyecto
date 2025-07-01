@@ -1,5 +1,5 @@
 // src/pages/Cart.js
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { IoCartOutline } from "react-icons/io5";
 import './cart.css';
 
@@ -20,11 +20,6 @@ const Cart = () => {
   const getTotal = () =>
     cartItems.reduce((acc, item) => acc + item.precio, 0);
 
-  const handleCheckout = () => {
-    alert('Gracias por tu compra 🍔');
-    setCartItems([]);
-    localStorage.removeItem('cart');
-  };
 
   return (
     <div className="cart-container">
@@ -48,7 +43,6 @@ const Cart = () => {
           </div>
           <div className="cart-summary">
             <h3>Total: ${getTotal().toLocaleString()}</h3>
-            <button className="checkout-btn" onClick={handleCheckout}>Pagar Ahora</button>
           </div>
         </>
       )}

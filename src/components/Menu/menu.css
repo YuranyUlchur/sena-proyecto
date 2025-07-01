@@ -1,7 +1,28 @@
 /* src/pages/menu.css */
+
+/* Variables globales */
+:root {
+  --color-fondo: #f8f8f8;
+  --color-primario: #e63946;
+  --color-secundario: #34495e;
+  --color-descripcion: #777;
+  --color-precio: #ff4b2be1;
+  --color-boton: #ff5722;
+  --color-blanco: #ffffff;
+  --sombra-card: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+  --fuente-principal: "Flame-RegularSans", sans-serif;
+  --fuente-destacada: "Helvetica Black", sans-serif;
+
+  --ancho-card: 300px;
+  --altura-img: 200px;
+  --borde-radius: 15px;
+}
+
+/* Estilos */
 .menu-container {
   padding: 60px 20px;
-  background: #f8f8f8;
+  background: var(--color-fondo);
   min-height: 100vh;
   text-align: center;
 }
@@ -11,9 +32,8 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 1rem;
-  color: #e63946;
-  font-family: "Helvetica Black";
-
+  color: var(--color-primario);
+  font-family: var(--fuente-destacada);
 }
 
 .menu-grid {
@@ -24,17 +44,16 @@
 }
 
 .menu-card {
-  background-color: white;
-  border-radius: 15px;
+  background-color: var(--color-blanco);
+  border-radius: var(--borde-radius);
   overflow: hidden;
-  width: 300px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: var(--ancho-card);
+  box-shadow: var(--sombra-card);
   transition: transform 0.3s;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 
 .menu-card:hover {
   transform: scale(1.03);
@@ -42,7 +61,7 @@
 
 .menu-img {
   width: 100%;
-  height: 200px;
+  height: var(--altura-img);
   object-fit: cover;
 }
 
@@ -56,35 +75,32 @@
 .menu-content h3 {
   font-size: 1.4rem;
   margin-bottom: 10px;
-  color: #34495e;
-  font-family: "Helvetica Black";
-
+  color: var(--color-secundario);
+  font-family: var(--fuente-destacada);
 }
 
 .menu-content p {
   font-size: 1rem;
-  color: #777;
+  color: var(--color-descripcion);
   text-align: left;
-  font-family: "Flame-RegularSans";
-
+  font-family: var(--fuente-principal);
 }
 
 .menu-price {
   font-weight: bold;
   font-size: 1.1rem;
-  color: #ff4b2be1;
+  color: var(--color-precio);
   text-align: left;
 }
-
 
 .button-cart-menu {
   align-self: flex-end;
   margin-top: auto;
-  background-color: #ff5722;
-  color: white;
+  background-color: var(--color-boton);
+  color: var(--color-blanco);
   border: none;
   padding: 8px 12px;
   border-radius: 5px;
   cursor: pointer;
-  font-family: "Flame-RegularSans";
+  font-family: var(--fuente-principal);
 }

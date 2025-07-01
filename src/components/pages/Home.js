@@ -5,6 +5,8 @@ import { useAuth } from '../../context/AuthContext';
 import Items from '../../components/data/Items';
 import Ubicacion from '../Location/Location';
 import './Home.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
 
@@ -17,11 +19,17 @@ const Home = () => {
         }
     }, [user, navigate]);
 
-    const addToCart = (product) => {
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        cart.push(product);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        alert(`${product.nombre} añadido al carrito 🛒`);
+    const addToCart = (item) => {
+        console.log("Añadido al carrito:", item);
+        toast.success(`${item.nombre} añadido al carrito 🛒`, {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "colored"
+        });
     };
 
 
@@ -63,6 +71,7 @@ const Home = () => {
 
 
             <section className="home-container">
+                <ToastContainer />
                 <h1 className="promo-title">¡PROMOCIONES!</h1>
                 {chunkedMenuItems.map((row, rowIndex) => (
                     <div className="home-row" key={rowIndex}>
@@ -73,7 +82,7 @@ const Home = () => {
                                     <h3>{item.nombre}</h3>
                                     <p>{item.descripcion}</p>
                                     <span className="home-price">${item.precio.toLocaleString()}</span>
-                                    <button onClick={() => addToCart(item)} className="button-cart">
+                                    <button onClick={() => addToCart(item)} className="button-cart-menu">
                                         Añadir al carrito
                                     </button>
                                 </div>
