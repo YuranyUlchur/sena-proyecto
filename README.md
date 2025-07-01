@@ -1,6 +1,10 @@
 # 🍔 Sistema de Inventario - Emprendimiento de Comida Rápida
+<img align="center" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2I4aGhpbmx6M2o3amxxZXJvaHhzdzJiajgwa282dWhoNjgweGRuNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/12uXi1GXBibALC/giphy.gif" />
+
 
 Este proyecto es una **interfaz web estática** desarrollada como propuesta técnica para un sistema de inventario y pedidos de un emprendimiento de comida rápida. Está diseñado para ser escalado a futuro, integrando funcionalidades backend y persistencia de datos.
+
+> 🔗 **[Visita la demo aquí →](https://1era-parada.netlify.app/login)**
 
 
 ---
